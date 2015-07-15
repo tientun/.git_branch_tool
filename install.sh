@@ -1,5 +1,6 @@
 #!/bin/sh
 rm -rf $HOME/.gittool
+rm $HOME/.gitconfig
 if [ ! -d "$HOME/.gittool" ]; then
     echo "Installing gittool for the first time"
     git clone https://github.com/tientun/.git_branch_tool.git "$HOME/.gittool"
