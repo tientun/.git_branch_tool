@@ -13,6 +13,8 @@
   new = green
 [alias]
   new = !sh -c 'DATE=`date +%Y%m%d` && git checkout master && git pull origin master && git checkout -b new-{USERNAME}-$DATE-$0'
+  update = !sh -c 'DATE=`date +%Y%m%d` && git checkout master && git pull origin master && git checkout -b update-{USERNAME}-$DATE-$0'
+  fix = !sh -c 'DATE=`date +%Y%m%d` && git checkout master && git pull origin master && git checkout -b fix-{USERNAME}-$DATE-$0'
   # add
   a = add                           # add
   chunkyadd = add --patch           # stage commits chunk by chunk
