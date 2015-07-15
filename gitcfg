@@ -12,7 +12,7 @@
   old = red
   new = green
 [alias]
- test = !sh -c 'echo blaBla'
+  new = !sh -c 'DATE=`date +%Y%m%d` && git checkout master && git pull origin master && git checkout -b new-{USERNAME}-$DATE-$0'
   # add
   a = add                           # add
   chunkyadd = add --patch           # stage commits chunk by chunk

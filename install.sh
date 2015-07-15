@@ -1,11 +1,12 @@
 #!/bin/sh
 
-if [ ! -d "$HOME/.gittool” ]; then
+if [ ! -d "$HOME/.gittool" ]; then
     echo "Installing gittool for the first time"
-    git clone https://github.com/tientun/git_branch_tool.git "$HOME/.gittool"
-    cd "$HOME/.yadr"
+    git clone https://github.com/tientun/.git_branch_tool.git "$HOME/.gittool"
+    cd "$HOME/.gittool"
     export NAME="$1"
+    LC_ALL=C find ~/.gittool/gitcfg -type f -exec sed -i '' "s/{USERNAME}/$NAME/g" {} \;
     ln -s ~/.gittool/gitcfg ~/.bla
 else
-    echo “gittool is already installed"
+    echo "gittool is already installed"
 fi
