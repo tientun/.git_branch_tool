@@ -9,7 +9,7 @@ if [ ! -d "$HOME/.gittool" ]; then
     echo $1
     unamestr=`uname`
 	if [ "$unamestr" = 'Linux' ]; then
-		sed -i 's/{USERNAME}/"$NAME"/g' ~/.gittool/gitcfg
+		sed -i 's/{USERNAME}/'$NAME'/g' ~/.gittool/gitcfg
 		echo 'Linux'
 	elif [ "$unamestr" = 'Darwin' ]; then
    		sed -i '' 's/{USERNAME}/$NAME/g' ~/.gittool/gitcfg
