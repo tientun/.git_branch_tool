@@ -7,12 +7,12 @@ if [ ! -d "$HOME/.gittool" ]; then
     cd "$HOME/.gittool"
     export NAME="$1"
     unamestr=`uname`
-	if [ "$unamestr" == 'Linux' ]; then
+	if [ "$unamestr" = 'Linux' ]; then
 		sed -i 's/{USERNAME}/$NAME/g' ~/.gittool/gitcfg
-		#echo 'Linux'
-	elif [ "$unamestr" == 'Darwin' ]; then
+		echo 'Linux'
+	elif [ "$unamestr" = 'Darwin' ]; then
    		sed -i '' 's/{USERNAME}/$NAME/g' ~/.gittool/gitcfg
-   		#echo 'Mac'
+   		echo 'Mac'
 	fi
     #LC_ALL=C find ~/.gittool/gitcfg -type f -exec sed -i '' "s/{USERNAME}/$NAME/g" {} \;
     ln -s ~/.gittool/gitcfg ~/.gitconfig
