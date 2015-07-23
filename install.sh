@@ -8,6 +8,13 @@ if [ ! -d "$HOME/.gittool" ]; then
     if [ "$unamestr" = 'Linux' ]; then
     	sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
     	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
+    	echo 'export PATH="$HOME/.linuxbrew/bin:$PATH"' >> ~/.zshrc
+	echo 'export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"' >> ~/.zshrc
+	echo 'export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"' >> ~/.zshrc
+	
+	echo 'export PATH="$HOME/.linuxbrew/bin:$PATH"' >> ~/.bashrc
+	echo 'export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"' >> ~/.bashrc
+	echo 'export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"' >> ~/.bashrc
     fi
     #install hub
     brew install hub
