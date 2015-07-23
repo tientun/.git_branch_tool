@@ -8,7 +8,8 @@ if [ ! -d "$HOME/.gittool" ]; then
     	sudo apt-get install build-essential curl git m4 ruby texinfo libbz2-dev libcurl4-openssl-dev libexpat-dev libncurses-dev zlib1g-dev
     	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/linuxbrew/go/install)"
     fi
-    
+    #install hub
+    brew install hub
     #Checkout and install gittool
     git clone https://github.com/tientun/.git_branch_tool.git "$HOME/.gittool"
     cd "$HOME/.gittool"
