@@ -13,14 +13,14 @@ if [ ! -d "$HOME/.gittool" ]; then
     brew install hub
     #Checkout and install gittool
     git clone https://github.com/tientun/.git_branch_tool.git "$HOME/.gittool"
-    cd "$HOME/.gittool"
+
     export NAME="$1"
 	if [ "$unamestr" = 'Linux' ]; then
 		sed -i 's/{USERNAME}/$NAME/g' ~/.gittool/gitcfg
-		#echo 'Linux'
+		echo 'Linux'
 	elif [ "$unamestr" = 'Darwin' ]; then
    		sed -i '' 's/{USERNAME}/$NAME/g' ~/.gittool/gitcfg
-   		#echo 'Mac'
+   		echo 'Mac'
 	fi
     #LC_ALL=C find ~/.gittool/gitcfg -type f -exec sed -i '' "s/{USERNAME}/$NAME/g" {} \;
     ln -s ~/.gittool/gitcfg ~/.gitconfig
